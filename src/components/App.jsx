@@ -3,7 +3,6 @@ import {Component} from "react";
 import SectionTitle from './SectionTitle/Section';
 import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
-//import Notification from './Notification/Notification';
 
 class App extends Component {
   state = {
@@ -48,10 +47,8 @@ class App extends Component {
     neutral={neutral}
     total={total}
     positivePercentage={totalGood}/>
-    </SectionTitle>
-     
+    </SectionTitle>  
     </>
-   
   )
   }
 };

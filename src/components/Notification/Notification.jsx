@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import { NotificationDefault} from "./Notification.styled";
+import {NotificationDefault} from "./Notification.styled";
 
 
 const Notification = ({message}) => {

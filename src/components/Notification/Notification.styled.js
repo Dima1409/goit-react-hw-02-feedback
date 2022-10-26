@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
 export const NotificationDefault = styled.div`
-color: teal;
+color: tomato;
+font-size: 24px;
 `

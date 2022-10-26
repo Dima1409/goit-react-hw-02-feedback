@@ -5,19 +5,21 @@ export const FeedbackTitle = styled.h2`
     text-decoration: underline;
     color: tomato;
     text-align: left;
+    margin-bottom: 40px;
 `
 export const StatisticList = styled.ul`
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: left;
-    list-style: none;
+    flex-direction: column;
 `
 export const StatisticItem = styled.li`
-   margin: 0 10px;
+   display: flex;
+   justify-content: space-between;
    border: 1px solid grey;
-   padding: 4px;
+   padding: 4px 10px;
    border-radius: 2px;
    background-color: rgb(187, 185, 185);
-   cursor: pointer;
+   font-size: 24px;
+   font-weight: 600;
+   color: #000000;
 `
