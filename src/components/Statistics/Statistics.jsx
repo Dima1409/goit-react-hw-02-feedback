@@ -1,20 +1,18 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import {FeedbackTitle, StatisticList, StatisticItem} from './Statistics.styled'
-import Notification from "components/Notification/Notification";
+import {StatisticList, StatisticItem} from './Statistics.styled'
 
 const Statistics = ({good, neutral, bad, total, positivePercentage}) => {
     
     return (
         <>
-        <FeedbackTitle>Statistics</FeedbackTitle>
-        {!total ? <Notification message="There is no feedback"/> : <StatisticList>
+        <StatisticList>
             <StatisticItem>Good: <span>{good}</span></StatisticItem>
             <StatisticItem>Neutral: <span>{neutral}</span></StatisticItem>
             <StatisticItem>Bad: <span>{bad}</span></StatisticItem>
             <StatisticItem>Total: <span>{total}</span></StatisticItem>
             <StatisticItem>Positive feedback: <span>{positivePercentage}%</span></StatisticItem>
-                                   </StatisticList>}
+        </StatisticList>
         </>
     )
 }

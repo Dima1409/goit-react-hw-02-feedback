@@ -1,8 +1,10 @@
 import React from 'react';
 import {Component} from "react";
-import SectionTitle from './SectionTitle/Section';
-import Statistics from './Statistics/Statistics';
-import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
+import SectionTitle from '../SectionTitle/Section';
+import Statistics from '../Statistics/Statistics';
+import { FeedbackTitle } from './App.styled';
+import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
+import Notification from "components/Notification/Notification";
 
 class App extends Component {
   state = {
@@ -39,14 +41,15 @@ class App extends Component {
     <SectionTitle title='Please leave feedback'>
     <FeedbackOptions
     options={Object.keys(this.state)}
-    onLeaveFeedback={this.handleButtonFeedback}
-    />
-    <Statistics
+    onLeaveFeedback={this.handleButtonFeedback}/>
+    
+    <FeedbackTitle>Statistics</FeedbackTitle>
+    {total ? <Statistics
     good={good}
     bad={bad}
     neutral={neutral}
     total={total}
-    positivePercentage={totalGood}/>
+    positivePercentage={totalGood}/> : <Notification message="There is no feedback"/>}
     </SectionTitle>  
     </>
   )
